@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C438121197291AC00D4973C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C438120197291AC00D4973C /* Foundation.framework */; };
+		2C438123197291AC00D4973C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C438122197291AC00D4973C /* CoreGraphics.framework */; };
+		2C438125197291AC00D4973C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C438124197291AC00D4973C /* UIKit.framework */; };
+		2C43812B197291AC00D4973C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C438129197291AC00D4973C /* InfoPlist.strings */; };
+		2C43812D197291AC00D4973C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C43812C197291AC00D4973C /* main.m */; };
+		2C438131197291AC00D4973C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C438130197291AC00D4973C /* AppDelegate.m */; };
+		2C438134197291AC00D4973C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C438132197291AC00D4973C /* Main.storyboard */; };
+		2C438137197291AC00D4973C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C438136197291AC00D4973C /* ViewController.m */; };
+		2C438139197291AC00D4973C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C438138197291AC00D4973C /* Images.xcassets */; };
+		2C438140197291AC00D4973C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C43813F197291AC00D4973C /* XCTest.framework */; };
+		2C438141197291AC00D4973C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C438120197291AC00D4973C /* Foundation.framework */; };
+		2C438142197291AC00D4973C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C438124197291AC00D4973C /* UIKit.framework */; };
+		2C43814A197291AC00D4973C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C438148197291AC00D4973C /* InfoPlist.strings */; };
+		2C43814C197291AC00D4973C /* SherlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C43814B197291AC00D4973C /* SherlockTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C438143197291AC00D4973C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C438115197291AC00D4973C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C43811C197291AC00D4973C;
+			remoteInfo = Sherlock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C43811D197291AC00D4973C /* Sherlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sherlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C438120197291AC00D4973C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2C438122197291AC00D4973C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2C438124197291AC00D4973C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2C438128197291AC00D4973C /* Sherlock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sherlock-Info.plist"; sourceTree = "<group>"; };
+		2C43812A197291AC00D4973C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2C43812C197291AC00D4973C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C43812E197291AC00D4973C /* Sherlock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sherlock-Prefix.pch"; sourceTree = "<group>"; };
+		2C43812F197291AC00D4973C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2C438130197291AC00D4973C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2C438133197291AC00D4973C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C438135197291AC00D4973C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2C438136197291AC00D4973C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2C438138197291AC00D4973C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2C43813E197291AC00D4973C /* SherlockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SherlockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C43813F197291AC00D4973C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2C438147197291AC00D4973C /* SherlockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SherlockTests-Info.plist"; sourceTree = "<group>"; };
+		2C438149197291AC00D4973C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2C43814B197291AC00D4973C /* SherlockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SherlockTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C43811A197291AC00D4973C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C438123197291AC00D4973C /* CoreGraphics.framework in Frameworks */,
+				2C438125197291AC00D4973C /* UIKit.framework in Frameworks */,
+				2C438121197291AC00D4973C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C43813B197291AC00D4973C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C438140197291AC00D4973C /* XCTest.framework in Frameworks */,
+				2C438142197291AC00D4973C /* UIKit.framework in Frameworks */,
+				2C438141197291AC00D4973C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C438114197291AC00D4973C = {
+			isa = PBXGroup;
+			children = (
+				2C438126197291AC00D4973C /* Sherlock */,
+				2C438145197291AC00D4973C /* SherlockTests */,
+				2C43811F197291AC00D4973C /* Frameworks */,
+				2C43811E197291AC00D4973C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C43811E197291AC00D4973C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C43811D197291AC00D4973C /* Sherlock.app */,
+				2C43813E197291AC00D4973C /* SherlockTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C43811F197291AC00D4973C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C438120197291AC00D4973C /* Foundation.framework */,
+				2C438122197291AC00D4973C /* CoreGraphics.framework */,
+				2C438124197291AC00D4973C /* UIKit.framework */,
+				2C43813F197291AC00D4973C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C438126197291AC00D4973C /* Sherlock */ = {
+			isa = PBXGroup;
+			children = (
+				2C43812F197291AC00D4973C /* AppDelegate.h */,
+				2C438130197291AC00D4973C /* AppDelegate.m */,
+				2C438132197291AC00D4973C /* Main.storyboard */,
+				2C438135197291AC00D4973C /* ViewController.h */,
+				2C438136197291AC00D4973C /* ViewController.m */,
+				2C438138197291AC00D4973C /* Images.xcassets */,
+				2C438127197291AC00D4973C /* Supporting Files */,
+			);
+			path = Sherlock;
+			sourceTree = "<group>";
+		};
+		2C438127197291AC00D4973C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C438128197291AC00D4973C /* Sherlock-Info.plist */,
+				2C438129197291AC00D4973C /* InfoPlist.strings */,
+				2C43812C197291AC00D4973C /* main.m */,
+				2C43812E197291AC00D4973C /* Sherlock-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C438145197291AC00D4973C /* SherlockTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C43814B197291AC00D4973C /* SherlockTests.m */,
+				2C438146197291AC00D4973C /* Supporting Files */,
+			);
+			path = SherlockTests;
+			sourceTree = "<group>";
+		};
+		2C438146197291AC00D4973C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C438147197291AC00D4973C /* SherlockTests-Info.plist */,
+				2C438148197291AC00D4973C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C43811C197291AC00D4973C /* Sherlock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C43814F197291AC00D4973C /* Build configuration list for PBXNativeTarget "Sherlock" */;
+			buildPhases = (
+				2C438119197291AC00D4973C /* Sources */,
+				2C43811A197291AC00D4973C /* Frameworks */,
+				2C43811B197291AC00D4973C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sherlock;
+			productName = Sherlock;
+			productReference = 2C43811D197291AC00D4973C /* Sherlock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C43813D197291AC00D4973C /* SherlockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C438152197291AC00D4973C /* Build configuration list for PBXNativeTarget "SherlockTests" */;
+			buildPhases = (
+				2C43813A197291AC00D4973C /* Sources */,
+				2C43813B197291AC00D4973C /* Frameworks */,
+				2C43813C197291AC00D4973C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C438144197291AC00D4973C /* PBXTargetDependency */,
+			);
+			name = SherlockTests;
+			productName = SherlockTests;
+			productReference = 2C43813E197291AC00D4973C /* SherlockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C438115197291AC00D4973C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Yi-Shou";
+				TargetAttributes = {
+					2C43813D197291AC00D4973C = {
+						TestTargetID = 2C43811C197291AC00D4973C;
+					};
+				};
+			};
+			buildConfigurationList = 2C438118197291AC00D4973C /* Build configuration list for PBXProject "Sherlock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C438114197291AC00D4973C;
+			productRefGroup = 2C43811E197291AC00D4973C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C43811C197291AC00D4973C /* Sherlock */,
+				2C43813D197291AC00D4973C /* SherlockTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C43811B197291AC00D4973C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C438139197291AC00D4973C /* Images.xcassets in Resources */,
+				2C43812B197291AC00D4973C /* InfoPlist.strings in Resources */,
+				2C438134197291AC00D4973C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C43813C197291AC00D4973C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C43814A197291AC00D4973C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C438119197291AC00D4973C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C438137197291AC00D4973C /* ViewController.m in Sources */,
+				2C438131197291AC00D4973C /* AppDelegate.m in Sources */,
+				2C43812D197291AC00D4973C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C43813A197291AC00D4973C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C43814C197291AC00D4973C /* SherlockTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C438144197291AC00D4973C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C43811C197291AC00D4973C /* Sherlock */;
+			targetProxy = 2C438143197291AC00D4973C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C438129197291AC00D4973C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C43812A197291AC00D4973C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2C438132197291AC00D4973C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C438133197291AC00D4973C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C438148197291AC00D4973C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C438149197291AC00D4973C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C43814D197291AC00D4973C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2C43814E197291AC00D4973C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C438150197291AC00D4973C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sherlock/Sherlock-Prefix.pch";
+				INFOPLIST_FILE = "Sherlock/Sherlock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2C438151197291AC00D4973C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sherlock/Sherlock-Prefix.pch";
+				INFOPLIST_FILE = "Sherlock/Sherlock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2C438153197291AC00D4973C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sherlock.app/Sherlock";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sherlock/Sherlock-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SherlockTests/SherlockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2C438154197291AC00D4973C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sherlock.app/Sherlock";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sherlock/Sherlock-Prefix.pch";
+				INFOPLIST_FILE = "SherlockTests/SherlockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C438118197291AC00D4973C /* Build configuration list for PBXProject "Sherlock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C43814D197291AC00D4973C /* Debug */,
+				2C43814E197291AC00D4973C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C43814F197291AC00D4973C /* Build configuration list for PBXNativeTarget "Sherlock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C438150197291AC00D4973C /* Debug */,
+				2C438151197291AC00D4973C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2C438152197291AC00D4973C /* Build configuration list for PBXNativeTarget "SherlockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C438153197291AC00D4973C /* Debug */,
+				2C438154197291AC00D4973C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C438115197291AC00D4973C /* Project object */;
+}
