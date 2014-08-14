@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDd-9M-UQe">
-                                <rect key="frame" x="142" y="269" width="158" height="30"/>
+                                <rect key="frame" x="142" y="188" width="158" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go Chap.10 ScrollView">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4F-ds-6YI">
-                                <rect key="frame" x="97" y="307" width="203" height="30"/>
+                                <rect key="frame" x="97" y="226" width="203" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go Chap. 11,12,13 TableView">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,7 +62,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Q5-Ff-UbG">
-                                <rect key="frame" x="116" y="345" width="184" height="30"/>
+                                <rect key="frame" x="116" y="264" width="184" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go Chap. 15 CoreLocation">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,13 +72,23 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlZ-b5-CU4">
-                                <rect key="frame" x="133" y="383" width="167" height="30"/>
+                                <rect key="frame" x="133" y="302" width="167" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go Chap. 16 ModalView">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="sgI-DD-HGB" kind="modal" identifier="modalViewId" id="b0k-4l-vp6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVZ-PB-9hq">
+                                <rect key="frame" x="56" y="340" width="244" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go Chap. 17 ImagePickerController">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fxP-lq-SdX" kind="modal" id="Jot-6T-ehU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,6 +119,46 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="762" y="-35"/>
+        </scene>
+        <!--Lec17 View Controller-->
+        <scene sceneID="ORP-wn-gjG">
+            <objects>
+                <viewController id="fxP-lq-SdX" customClass="Lec17ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GhW-94-22a"/>
+                        <viewControllerLayoutGuide type="bottom" id="F7D-MH-sX7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eZR-x5-7Ib">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydi-C7-AhN">
+                                <rect key="frame" x="188" y="518" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5WU-Px-qnI" kind="unwind" unwindAction="back:" id="DbO-Uf-Il5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I18-4k-AoK">
+                                <rect key="frame" x="101" y="518" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePic:" destination="fxP-lq-SdX" eventType="touchUpInside" id="kyK-9L-YPW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYE-zH-tdv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="651"/>
         </scene>
         <!--Lec16 View Controller-->
         <scene sceneID="dD1-JC-k5j">
@@ -160,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHu-v0-KFS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1304" y="790"/>
+            <point key="canvasLocation" x="1300" y="651"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jc3-Ex-pCV">
@@ -189,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evA-Bo-miv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1304" y="109"/>
+            <point key="canvasLocation" x="1300" y="-35"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="DFQ-3U-97B">
@@ -234,26 +284,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoX-ab-MEU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1304" y="-565"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="kyq-TW-ws3">
-            <objects>
-                <viewController id="XWE-r4-Vig" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uWP-0c-bw8"/>
-                        <viewControllerLayoutGuide type="bottom" id="P53-ka-nUk"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="g3Y-Tc-WI2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="xzI-Rx-dR9"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EPv-4z-dTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1679" y="-1247"/>
+            <point key="canvasLocation" x="1300" y="-783"/>
         </scene>
         <!--Scroll View Controller-->
         <scene sceneID="GYv-95-CXb">
@@ -297,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xl9-yM-IKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1304" y="-1247"/>
+            <point key="canvasLocation" x="762" y="-783"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hw4-ks-NcB">
@@ -369,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKA-H6-dUp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1745" y="180"/>
+            <point key="canvasLocation" x="1741" y="36"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

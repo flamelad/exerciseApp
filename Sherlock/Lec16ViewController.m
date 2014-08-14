@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *mytextField;
 @property (weak, nonatomic) IBOutlet UILabel *myLabel;
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property UIActionSheet *actionSheet;
 
 @end
 
@@ -66,16 +67,21 @@
                  object:self.mytextField];
     //above textfiled and keyboard
     //action sheet
-    UIActionSheet *actionSheet=[[UIActionSheet alloc]initWithTitle:@"Lec16"
-delegate:self
-cancelButtonTitle:@"cancel"
-destructiveButtonTitle:@"destructive"
-otherButtonTitles:@"1",@"2", nil];
-    [actionSheet showFromRect:CGRectMake(100, 100, 100, 100) inView:self.view animated:YES];
 //    self.modalPresentationStyle=UIModalPresentationPageSheet;
     // Do any additional setup after loading the view.
 }
-
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    self.actionSheet=[[UIActionSheet alloc]initWithTitle:@"Lec16"
+                                                delegate:self
+                                       cancelButtonTitle:@"cancel"
+                                  destructiveButtonTitle:@"destructive"
+                                       otherButtonTitles:@"1",@"2", nil];
+    [self.actionSheet showInView:self.view];
+    [self.actionSheet addButtonWithTitle:@"more"];
+}
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"buttonIndex:@%d",buttonIndex);
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

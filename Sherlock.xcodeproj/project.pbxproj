@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C2B78B1198F33C70043FC95 /* Lec14ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B78B0198F33C70043FC95 /* Lec14ViewController.m */; };
 		2C2E6B8C1999F8860051E8CE /* Lec16ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2E6B8B1999F8860051E8CE /* Lec16ViewController.m */; };
+		2C42ED34199B029A00766C4F /* Lec17ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C42ED33199B029A00766C4F /* Lec17ViewController.m */; };
 		2C438121197291AC00D4973C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C438120197291AC00D4973C /* Foundation.framework */; };
 		2C438123197291AC00D4973C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C438122197291AC00D4973C /* CoreGraphics.framework */; };
 		2C438125197291AC00D4973C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C438124197291AC00D4973C /* UIKit.framework */; };
@@ -49,6 +50,8 @@
 		2C2B78B0198F33C70043FC95 /* Lec14ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lec14ViewController.m; sourceTree = "<group>"; };
 		2C2E6B8A1999F8860051E8CE /* Lec16ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lec16ViewController.h; sourceTree = "<group>"; };
 		2C2E6B8B1999F8860051E8CE /* Lec16ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lec16ViewController.m; sourceTree = "<group>"; };
+		2C42ED32199B029A00766C4F /* Lec17ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lec17ViewController.h; sourceTree = "<group>"; };
+		2C42ED33199B029A00766C4F /* Lec17ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lec17ViewController.m; sourceTree = "<group>"; };
 		2C43811D197291AC00D4973C /* Sherlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sherlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C438120197291AC00D4973C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2C438122197291AC00D4973C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,6 +71,7 @@
 		2C438147197291AC00D4973C /* SherlockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SherlockTests-Info.plist"; sourceTree = "<group>"; };
 		2C438149197291AC00D4973C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C43814B197291AC00D4973C /* SherlockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SherlockTests.m; sourceTree = "<group>"; };
+		2C44DD1C199C5F2700DED045 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		2C9A9803197E03D900348ED8 /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
 		2C9A9804197E03D900348ED8 /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
 		2C9A9806197E192800348ED8 /* testPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testPic.png; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 				2CB5179B1998B3F0000F8409 /* MapPin.m */,
 				2C438130197291AC00D4973C /* AppDelegate.m */,
 				2C438132197291AC00D4973C /* Main.storyboard */,
+				2C42ED32199B029A00766C4F /* Lec17ViewController.h */,
+				2C42ED33199B029A00766C4F /* Lec17ViewController.m */,
 				2C438135197291AC00D4973C /* ViewController.h */,
 				2C438136197291AC00D4973C /* ViewController.m */,
 				2C2B78AF198F33C70043FC95 /* Lec14ViewController.h */,
@@ -316,6 +322,7 @@
 				2CF6328519877A4B00658AB8 /* Photographer.m in Sources */,
 				2C2B78B1198F33C70043FC95 /* Lec14ViewController.m in Sources */,
 				2CB5179C1998B3F0000F8409 /* MapPin.m in Sources */,
+				2C42ED34199B029A00766C4F /* Lec17ViewController.m in Sources */,
 				2C9A980A197E5BA500348ED8 /* TableViewController.m in Sources */,
 				2C9A9805197E03D900348ED8 /* ScrollViewController.m in Sources */,
 				2C9E3719197FCF1500AAD980 /* Model.xcdatamodeld in Sources */,
@@ -354,6 +361,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2C438133197291AC00D4973C /* Base */,
+				2C44DD1C199C5F2700DED045 /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

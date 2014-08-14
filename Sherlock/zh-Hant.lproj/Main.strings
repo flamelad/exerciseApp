@@ -1,0 +1,54 @@
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "0J8-IF-T2W"; */
+"0J8-IF-T2W.normalTitle" = "Button";
+
+/* Class = "IBUILabel"; text = "visible"; ObjectID = "0mi-2W-Gi0"; */
+"0mi-2W-Gi0.text" = "visible";
+
+/* Class = "IBUIButton"; normalTitle = "Go Chap. 15 CoreLocation"; ObjectID = "1Q5-Ff-UbG"; */
+"1Q5-Ff-UbG.normalTitle" = "Go Chap. 15 CoreLocation";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "8NY-so-yac"; */
+"8NY-so-yac.normalTitle" = "Button";
+
+/* Class = "IBUIButton"; normalTitle = "BACK"; ObjectID = "Bvw-Ph-lI6"; */
+"Bvw-Ph-lI6.normalTitle" = "BACK";
+
+/* Class = "IBUIButton"; normalTitle = "Take"; ObjectID = "I18-4k-AoK"; */
+"I18-4k-AoK.normalTitle" = "Take";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "I1G-Mo-TED"; */
+"I1G-Mo-TED.normalTitle" = "Button";
+
+/* Class = "IBUIButton"; normalTitle = "Go Chap. 17 ImagePickerController"; ObjectID = "RVZ-PB-9hq"; */
+"RVZ-PB-9hq.normalTitle" = "Go Chap. 17 ImagePickerController";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "Vwx-bd-3f2"; */
+"Vwx-bd-3f2.normalTitle" = "Button";
+
+/* Class = "IBUIButton"; normalTitle = "Go Chap.10 ScrollView"; ObjectID = "ZDd-9M-UQe"; */
+"ZDd-9M-UQe.normalTitle" = "Go Chap.10 ScrollView";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "aao-gI-vqV"; */
+"aao-gI-vqV.text" = "Label";
+
+/* Class = "IBUILabel"; text = "3D ON/OFF"; ObjectID = "t27-Du-4P2"; */
+"t27-Du-4P2.text" = "3D ON/OFF";
+
+/* Class = "IBUIButton"; normalTitle = "Go Chap. 11,12,13 TableView"; ObjectID = "w4F-ds-6YI"; */
+"w4F-ds-6YI.normalTitle" = "Go Chap. 11,12,13 TableView";
+
+/* Class = "IBUISegmentedControl"; wp1-HU-fhb.segmentTitles[0] = "First"; ObjectID = "wp1-HU-fhb"; */
+"wp1-HU-fhb.segmentTitles[0]" = "First";
+
+/* Class = "IBUISegmentedControl"; wp1-HU-fhb.segmentTitles[1] = "satellite"; ObjectID = "wp1-HU-fhb"; */
+"wp1-HU-fhb.segmentTitles[1]" = "satellite";
+
+/* Class = "IBUISegmentedControl"; wp1-HU-fhb.segmentTitles[2] = "orig."; ObjectID = "wp1-HU-fhb"; */
+"wp1-HU-fhb.segmentTitles[2]" = "orig.";
+
+/* Class = "IBUIButton"; normalTitle = "Back"; ObjectID = "ydi-C7-AhN"; */
+"ydi-C7-AhN.normalTitle" = "Back";
+
+/* Class = "IBUIButton"; normalTitle = "Go Chap. 16 ModalView"; ObjectID = "zlZ-b5-CU4"; */
+"zlZ-b5-CU4.normalTitle" = "Go Chap. 16 ModalView";
