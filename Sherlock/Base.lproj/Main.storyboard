@@ -4,6 +4,67 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
+        <!--Lec Collection View Controller-->
+        <scene sceneID="5Xf-i8-8jV">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="74u-5t-VNs" customClass="LecCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="NN1-Sh-hBg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.93593179744525545" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="soK-tO-Ojr">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reuseCollectionCell" id="BTA-Cs-5mI">
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1i4-Ia-1s3">
+                                            <rect key="frame" x="-149" y="36" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxW-CD-aEz">
+                                            <rect key="frame" x="4" y="14" width="43" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="74u-5t-VNs" id="wYq-qB-rsd"/>
+                            <outlet property="delegate" destination="74u-5t-VNs" id="Qeo-9t-cKQ"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="dIY-Vk-THg"/>
+                    <connections>
+                        <segue destination="znx-S4-j8x" kind="push" identifier="function_1" id="wu6-Gj-W07"/>
+                        <segue destination="4RA-Ul-5jD" kind="push" identifier="function_2" id="qdk-he-yma"/>
+                        <segue destination="w8M-S8-kZ2" kind="push" identifier="function_3" id="3jK-kb-9Qv"/>
+                        <segue destination="sgI-DD-HGB" kind="push" identifier="function_4" id="5g0-6I-DWp"/>
+                        <segue destination="fxP-lq-SdX" kind="push" identifier="function_5" id="KT9-KV-5Kj"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="function_0" id="T5d-cS-a3t"/>
+                        <segue destination="BBQ-ud-Myj" kind="push" identifier="function_6" id="Ar6-wv-tWK"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ese-Xg-wtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="345" y="-35"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -32,26 +93,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDd-9M-UQe">
-                                <rect key="frame" x="142" y="188" width="158" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go Chap.10 ScrollView">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="znx-S4-j8x" kind="push" id="8Nb-pF-uoe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4F-ds-6YI">
-                                <rect key="frame" x="97" y="226" width="203" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go Chap. 11,12,13 TableView">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="4RA-Ul-5jD" kind="push" id="Ijh-ox-22h"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0J8-IF-T2W">
                                 <rect key="frame" x="135" y="448" width="51" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -59,36 +100,6 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="testbbbb:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8NN-LB-7cU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Q5-Ff-UbG">
-                                <rect key="frame" x="116" y="264" width="184" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go Chap. 15 CoreLocation">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="w8M-S8-kZ2" kind="push" id="KJD-ub-lDf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlZ-b5-CU4">
-                                <rect key="frame" x="133" y="302" width="167" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go Chap. 16 ModalView">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="sgI-DD-HGB" kind="modal" identifier="modalViewId" id="b0k-4l-vp6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVZ-PB-9hq">
-                                <rect key="frame" x="56" y="340" width="244" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go Chap. 17 ImagePickerController">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="fxP-lq-SdX" kind="modal" id="Jot-6T-ehU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -119,6 +130,25 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="762" y="-35"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Vsp-3k-Ee1">
+            <objects>
+                <viewController id="BBQ-ud-Myj" customClass="DPViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VG5-ri-aeo"/>
+                        <viewControllerLayoutGuide type="bottom" id="pSi-Gp-gOe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SlK-qy-xXP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bDz-RI-yuo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GHI-dZ-RnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="345" y="651"/>
         </scene>
         <!--Lec17 View Controller-->
         <scene sceneID="ORP-wn-gjG">
@@ -155,6 +185,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="UXa-Sz-7OJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lYE-zH-tdv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -198,10 +229,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMb-z5-D3p">
+                                <rect key="frame" x="135" y="343" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Music">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="MusicTest:" destination="sgI-DD-HGB" eventType="touchDown" id="si6-U2-oip"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7Az-WG-c5Y"/>
                     <connections>
                         <outlet property="myLabel" destination="0mi-2W-Gi0" id="gi8-7W-E1e"/>
                         <outlet property="mytextField" destination="9Pu-5D-Nec" id="Olp-ep-Iwb"/>
@@ -341,12 +383,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="SC1-PA-nlJ"/>
+                        <segue destination="74u-5t-VNs" kind="relationship" relationship="rootViewController" id="8K1-4e-mz8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NY5-W0-pK3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="345" y="-35"/>
+            <point key="canvasLocation" x="-151" y="-35"/>
         </scene>
         <!--Lec14 View Controller-->
         <scene sceneID="TTy-Pm-oJB">

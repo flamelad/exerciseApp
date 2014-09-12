@@ -11,7 +11,7 @@
 #import "malloc/malloc.h"
 #include <objc/runtime.h>
 
-@interface TableViewController ()
+@interface TableViewController ()<NSFetchedResultsControllerDelegate>
 @property NSArray *testArray;
 @property UIManagedDocument *document;
 @property Photo *testStrong;
@@ -72,7 +72,7 @@
 //                forSaveOperation:UIDocumentSaveForOverwriting
 //               completionHandler:^(BOOL success) {
 //                   NSLog(@"ok");
-//                   if (self.i<100) {
+//                   if (self.i<3000) {
 //                   [self readyToWrite];
 //                   }
 //                   
@@ -80,34 +80,38 @@
 //            NSLog(@"%@",self.testStrong);
 //        }
 
+        
+        
         NSFetchRequest *request=[NSFetchRequest fetchRequestWithEntityName:@"Photo"];
-        request.fetchBatchSize=20;
-        request.fetchLimit=100;
-        request.sortDescriptors=@[[NSSortDescriptor sortDescriptorWithKey:@"title"
+//        request.fetchBatchSize=20;
+//        request.fetchLimit=100;
+        request.sortDescriptors=@[[NSSortDescriptor sortDescriptorWithKey:@"subtitle"
                                                                 ascending:NO
                                                                 selector:@selector(localizedStandardCompare:)
                                                                 ]];
         NSManagedObjectContext *coredata=self.document.managedObjectContext;
         NSError *error;
+        
         NSArray *photos=[coredata executeFetchRequest:request error:&error];
         NSLog(@"%@",[photos class]);
+//                NSLog(@"%@",photos[0]);
         NSLog(@"%zd",malloc_size((__bridge const void *)(photos)));
-        for(Photo *photo in photos){
-            NSLog(@"%@",photo.title);
+//        for(Photo *photo in photos){
+//            NSLog(@"%@",photo.title);
 //        NSLog(@"%zd",malloc_size((__bridge const void *)(photos)));
 //        NSLog(@"%@",photo);
-        }
+//        }
         NSLog(@"%zd",malloc_size((__bridge const void *)(photos)));
-        NSLog(@"%@",photos[0]);
-//NSLog(@"%zd",sizeof(photos));
+//        NSLog(@"%@",photos[0]);
+NSLog(@"%zd",sizeof(photos));
 
-//        _coreDataResult = [[NSFetchedResultsController alloc]initWithFetchRequest:request
-//                                                                 managedObjectContext:self.document.managedObjectContext
-//                                                                   sectionNameKeyPath:@"subtitle"
-//                                                                            cacheName:nil];
+        _coreDataResult = [[NSFetchedResultsController alloc]initWithFetchRequest:request
+                                                                 managedObjectContext:self.document.managedObjectContext                                                                   sectionNameKeyPath:@"title"
+                                                                    cacheName:@"flamelad"];
 //        [_coreDataResult performFetch:&error];
 //        NSLog(@"%d",[[_coreDataResult sections] count]);
-//        [self.tableView reloadData];
+        _coreDataResult.delegate=self;
+        [self.tableView reloadData];
     }
 }
 
@@ -135,7 +139,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    _i=0;
+    _i=1000;
     _testArray=@[@"test",@"test2",@"test3"];
 
     NSFileManager *fileManager=[NSFileManager defaultManager];
@@ -209,8 +213,12 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"%d",[[[self.coreDataResult sections]objectAtIndex:section] numberOfObjects]);
-    return [[[self.coreDataResult sections]objectAtIndex:section] numberOfObjects];
+//    NSLog(@"%d",[[[self.coreDataResult sections]objectAtIndex:section] numberOfObjects]);
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.coreDataResult sections] objectAtIndex:section];
+    NSInteger count = [sectionInfo numberOfObjects];
+    NSLog(@"count:%d",count);
+    return count;
+//    return [[[self.coreDataResult sections]objectAtIndex:section] numberOfObjects];
 //    return [_testArray count];
 }
 
@@ -222,6 +230,11 @@
 //        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellIdentifier"];
 //    }
     Photo *data=[self.coreDataResult objectAtIndexPath:indexPath];
+    NSLog(@"%@",indexPath);
+    NSLog(@"%@",[[[[self.coreDataResult sections] objectAtIndex:0] objects] objectAtIndex:5]);
+    NSLog(@"%@",[[[[self.coreDataResult sections] objectAtIndex:0] objects] objectAtIndex:15]);
+        NSLog(@"%@",[[[[self.coreDataResult sections] objectAtIndex:0] objects] objectAtIndex:25]);
+        NSLog(@"%@",[[[[self.coreDataResult sections] objectAtIndex:0] objects] objectAtIndex:55]);
     cell.textLabel.text=data.subtitle;
 //    cell.textLabel.text=[_testArray objectAtIndex:[indexPath row]];
     // Configure the cell...

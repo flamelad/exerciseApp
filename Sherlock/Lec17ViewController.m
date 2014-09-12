@@ -29,15 +29,23 @@
     self.imagePicker = [[UIImagePickerController alloc] init];
     self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     self.imagePicker.delegate = self;
-//    self.imagePicker.modalPresentationStyle = UIModalPresentationCurrentContext;
+    self.imagePicker.modalPresentationStyle = UIModalPresentationCurrentContext;
     self.imagePicker.allowsEditing = YES;
+    NSLog(@"%@",self.navigationController);
+
     [self presentViewController:self.imagePicker animated:YES completion:^{
         NSLog(@"display imagePicker");
     }];
-    
+
 
 }
+-(void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    navigationController.navigationBarHidden=NO;
+}
 
+- (void)showNavigationBar:(UIImagePickerController*)imagePicker {
+    [imagePicker setNavigationBarHidden:NO];
+}
 - (void) image:(UIImage *)image didFinishSavingWithError: (NSError *) error contextInfo: (void *) contextInfo{
     NSLog(@"what");
     if (error) {
@@ -52,9 +60,12 @@
     NSLog(@"ttttttt");
 //       self.image=[UIImage imageNamed:@"testPic.png"];
 //    UIImageWriteToSavedPhotosAlbum(self.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    
     [self dismissViewControllerAnimated:YES completion:^{}];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+NSLog(@"GGGGGGGGGGGGGGGGGGGGGGGGGGG:%hhd",self.imagePicker.isNavigationBarHidden);
 
     self.image=[info objectForKey:UIImagePickerControllerEditedImage];
     self.imageView=[[UIImageView alloc]initWithImage:self.image];
@@ -63,6 +74,25 @@
     [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
+-(NSString *) getTime{
+    NSNumberFormatter *formatter=[[NSNumberFormatter alloc]init];
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSNumber *parseNumber=[formatter numberFromString:@"123456"];
+    NSLog(@"%@",parseNumber);
+    NSDate *date=[NSDate date];
+    NSCalendar *calendar=[[NSCalendar alloc]initWithCalendarIdentifier:NSGregorianCalendar];
+    [calendar setTimeZone:[NSTimeZone systemTimeZone]];
+    NSDateComponents *dc=[calendar components:(NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond) fromDate:date];
+    NSLog(@"The time is %d:%d:%d", [dc hour], [dc minute], [dc second]);
+    NSLocale *usLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_TW"];
+    NSString *dateFormat=[NSDateFormatter dateFormatFromTemplate:@"yMMMMd"
+                                                         options:0
+                                                          locale:usLocale];
+    NSDateFormatter *formatDate=[[NSDateFormatter alloc]init];
+    [formatDate setDateFormat:dateFormat];
+    NSLog(@"%@, and %@", [usLocale displayNameForKey:NSLocaleIdentifier value:[usLocale localeIdentifier]], dateFormat);
+    return [formatDate stringFromDate:date];
+}
 
 - (void)viewDidLoad
 {
@@ -71,14 +101,7 @@
 //    NSLog(@"%hhd",[UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront]);
 //    NSLog(@"%hhd",[UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear]);
 //    NSLog(@"%hhd",[UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]);
-    CMMotionManager *motionManager=[[CMMotionManager alloc]init];
-    NSLog(@"%d",[motionManager isAccelerometerAvailable]);
-    NSLog(@"%d",[motionManager isDeviceMotionAvailable]);
-    NSLog(@"%d",[motionManager isGyroAvailable]);
-    NSLog(@"%d",[motionManager isMagnetometerAvailable]);
-    NSBundle *b1;
-    NSString *key,*table,*defaultValue,*comment;
-    NSBundle *bundle=NSLocalizedStringWithDefaultValue(key, table, b1, defaultValue, comment);
+
 }
 
 - (void)didReceiveMemoryWarning

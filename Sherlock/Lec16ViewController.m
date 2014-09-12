@@ -8,10 +8,12 @@
 
 #import "Lec16ViewController.h"
 #import "ViewController.h"
-@interface Lec16ViewController () <UITextFieldDelegate,UIActionSheetDelegate>
+#import <AVFoundation/AVFoundation.h>
+@interface Lec16ViewController () <UITextFieldDelegate,UIActionSheetDelegate,AVAudioPlayerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *mytextField;
 @property (weak, nonatomic) IBOutlet UILabel *myLabel;
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property AVAudioPlayer* player1;
 @property UIActionSheet *actionSheet;
 
 @end
@@ -30,7 +32,22 @@
     return self;
 }
 
+- (IBAction)MusicTest:(id)sender {
 
+//    [self.player prepareToPlay];
+//    self.player.numberOfLoops = 0;
+
+    NSLog(@"%hhd",[self.player1 isPlaying]);
+    NSError  *error;
+    self.player1 = [AVAudioPlayer alloc];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"motorcycle" ofType:@"wav"];
+    NSURL *url=[[NSURL alloc]initFileURLWithPath:path];
+    [self.player1 initWithContentsOfURL:url error:&error];
+    [self.player1 play];
+}
+- (void)audioPlayerBeginInterruption:(AVAudioPlayer *)player{
+    NSLog(@"test");
+}
 -(void)whenTextChanged:(NSNotification *)notification{
     NSLog(@"sadf");
     self.myLabel.text=self.mytextField.text;
@@ -51,7 +68,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.player1.delegate=self;
+
     //textfield and keyboard
     self.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
     self.mytextField.delegate=self;
@@ -66,9 +84,7 @@
                    name:UITextFieldTextDidChangeNotification
                  object:self.mytextField];
     //above textfiled and keyboard
-    //action sheet
-//    self.modalPresentationStyle=UIModalPresentationPageSheet;
-    // Do any additional setup after loading the view.
+    
 }
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
     self.actionSheet=[[UIActionSheet alloc]initWithTitle:@"Lec16"
